@@ -9,7 +9,7 @@ public class round {
      * @param num   The number to be rounded.
      * @return The rounded number.
      */
-    public double round(int place, double num){
+    public double round(int place, float num){
         double multiplier = Math.pow(10, place);
 
         return Math.round(num* multiplier)/ multiplier;

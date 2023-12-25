@@ -13,9 +13,9 @@ public class runTest {
             if (method.isAnnotationPresent(Test.class)) {
                 try {
                     if (java.lang.reflect.Modifier.isStatic(method.getModifiers())) {
-                        method.invoke(null); // Invoke static method with null
+                        method.invoke(null);
                     } else {
-                        method.invoke(testClass.getDeclaredConstructor().newInstance()); // Invoke instance method
+                        method.invoke(testClass.getDeclaredConstructor().newInstance());
                     }
                     System.out.println("Test passed: " + method.getName());
                 } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException | InstantiationException e) {
